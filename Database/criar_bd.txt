@@ -1,0 +1,10 @@
+Create Database TTW;
+Use TTW;
+
+Create table Utilizador(ID_Utilizador int Primary Key not null Auto_Increment, Utilizador varchar(50) not null, Nome varchar(50) not null, Email varchar(50) not null, Password varchar(50) not null);
+
+Create table Caminhada(ID_Caminhada int Primary Key not null Auto_Increment, ID_Responsavel int not null, ID_Local int not null, Duracao varchar(10) not null, Data varchar(10) not null, Hora varchar(10) not null);
+
+Create table Local(ID_Local int Primary Key not null Auto_Increment, Local varchar(50) not null, Latitude varchar(50) not null, Longitude varchar(50) not null);
+
+Create table UtilizadorCaminhada(ID_UtilizadorCaminhada int Primary Key not null Auto_Increment, ID_Utilizador int not null, ID_Caminhada int not null);
